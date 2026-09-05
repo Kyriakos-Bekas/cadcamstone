@@ -12,16 +12,16 @@ interface Stat {
 
 const STATS: Stat[] = [
   { target: 12, suffix: '+', label: 'Years drafting stone' },
-  { target: 4200, suffix: '+', label: 'Countertops programmed' },
-  { target: 20, suffix: '+', label: 'Countries served' },
-  { target: 24, suffix: 'h', label: 'Typical turnaround' }
+  { target: 4200, suffix: '+', label: 'Countertops programmed' }
 ];
 
 const REASONS = [
   'Drawings built for the machine, not just the eye',
   'Layer structure matched to your internal workflow',
-  'Cutting files programmed exclusively in Easystone',
-  'Support hours agreed up front — no surprises'
+  'Easystone database built from scratch, paired with AutoCAM to fit your setup',
+  'Cutting files programmed in Easystone, checked for clean machine execution',
+  "Prefer different software? We'll adapt to how you work",
+  'Support hours agreed up front, so there are no surprises'
 ];
 
 export function Stats() {

@@ -5,7 +5,7 @@ import { Reveal } from './Reveal';
 interface Service {
   icon: ComponentType<SVGProps<SVGSVGElement>>;
   title: string;
-  body: string;
+  body: string[];
   points: string[];
 }
 
@@ -13,7 +13,7 @@ const SERVICES: Service[] = [
   {
     icon: IconDrafting,
     title: 'Countertop Design',
-    body: 'Precise 2D countertop layouts created in AutoCAD for kitchens, bathrooms and outdoor spaces.',
+    body: ['Precise 2D countertop layouts created in AutoCAD for kitchens, bathrooms and outdoor spaces.'],
     points: [
       'AutoCAD 2D layouts',
       'Kitchen · bath · outdoor',
@@ -22,14 +22,14 @@ const SERVICES: Service[] = [
   },
   {
     icon: IconLayers,
-    title: 'Production-Ready Drawings',
-    body: 'Technical drawings organised with clearly structured layers, adjusted to your manufacturing requirements and internal workflow.',
-    points: ['Structured layers', 'Your standards', 'Workflow-matched']
+    title: 'Production-Ready Drawings & Slab Layouts',
+    body: ['Technical drawings and accurate slab layouts created using Slabsmith software, with optimized material usage and efficient production planning.'],
+    points: ['Structured layers', 'Workflow-matched']
   },
   {
     icon: IconCut,
     title: 'CNC Cutting Preparation',
-    body: 'Cutting-file programming developed exclusively in Easystone for accurate, efficient CNC machine execution.',
+    body: ['Cutting-file programming developed exclusively in Easystone for accurate, efficient CNC machine execution.'],
     points: [
       'Easystone programming',
       'Machine-verified paths',
@@ -39,7 +39,7 @@ const SERVICES: Service[] = [
   {
     icon: IconGlobe,
     title: 'Remote Fabrication Support',
-    body: 'Professional remote services for stone fabrication companies worldwide, with ongoing support arranged around your working hours.',
+    body: ['Professional remote services for stone fabrication companies worldwide, with ongoing support arranged around your working hours.'],
     points: ['Worldwide', 'Ongoing support', 'Agreed hours']
   }
 ];
@@ -107,7 +107,11 @@ function ServiceCard({ service, index }: { service: Service; index: number }) {
       <h3 className="mt-5 text-xl font-semibold text-fog-50">
         {service.title}
       </h3>
-      <p className="mt-2.5 leading-relaxed text-fog-300">{service.body}</p>
+      {service.body.map((paragraph, i) => (
+        <p key={i} className="mt-2.5 leading-relaxed text-fog-300">
+          {paragraph}
+        </p>
+      ))}
 
       <ul className="mt-5 flex flex-wrap gap-2">
         {service.points.map(point => (

@@ -26,6 +26,15 @@ export function Footer() {
             Remote CAD/CAM services for stone fabrication. Services include
             countertop design, production drawings and CNC cutting preparation.
           </p>
+          <p className="mt-4 text-sm text-fog-400">
+            Athens, Greece ·{' '}
+            <a
+              href="mailto:hello@cadcamstone.com"
+              className="text-fog-300 transition-colors hover:text-amber-500"
+            >
+              hello@cadcamstone.com
+            </a>
+          </p>
         </div>
 
         <nav aria-label="Footer">

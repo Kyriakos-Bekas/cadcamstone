@@ -4,22 +4,31 @@ const STEPS = [
   {
     n: '01',
     title: 'Share your project',
-    body: 'Send templates, site measurements or rough sketches. We confirm scope, materials and the standards you work to.'
+    body: [
+      'Send templates, site measurements or rough sketches. We confirm scope, materials and the standards you work to.'
+    ]
   },
   {
     n: '02',
     title: 'We draw & structure',
-    body: "Countertops are laid out in AutoCAD with clean, clearly organised layers that match your shop's workflow."
+    body: [
+      "Countertops are laid out in AutoCAD with clean, clearly organised layers that match your shop's workflow.",
+      'Create optimized slab layouts in Slabsmith, helping maximize material usage and improve production planning.'
+    ]
   },
   {
     n: '03',
     title: 'CNC files prepared',
-    body: 'Cutting programs are built in Easystone and checked for accurate, efficient machine execution.'
+    body: [
+      'Cutting programs are built in Easystone and checked for accurate, efficient machine execution.'
+    ]
   },
   {
     n: '04',
     title: 'Delivered & supported',
-    body: 'Files land ready to run. Ongoing remote support is arranged around your agreed working hours.'
+    body: [
+      'Files land ready to run. Ongoing remote support is arranged around your agreed working hours.'
+    ]
   }
 ];
 
@@ -61,7 +70,11 @@ export function Process() {
               <h3 className="mt-4 text-lg font-semibold text-fog-50">
                 {step.title}
               </h3>
-              <p className="mt-2 leading-relaxed text-fog-300">{step.body}</p>
+              {step.body.map((paragraph, j) => (
+                <p key={j} className="mt-2 leading-relaxed text-fog-300">
+                  {paragraph}
+                </p>
+              ))}
             </Reveal>
           ))}
         </ol>
