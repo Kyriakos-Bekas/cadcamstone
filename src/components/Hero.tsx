@@ -2,7 +2,7 @@ import { BlueprintCountertop } from './BlueprintCountertop';
 import { IconArrowRight } from './icons';
 import { Reveal } from './Reveal';
 
-const TOOLS = ['AutoCAD', 'Easystone', 'Remote-ready'];
+const TOOLS = ['AutoCAD', 'Easystone', 'Slabsmith', 'Remote-ready'];
 
 export function Hero() {
   return (
@@ -41,8 +41,9 @@ export function Hero() {
           <Reveal delay={70}>
             <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-fog-300">
               We turn your kitchen, bathroom and outdoor projects into
-              production-ready countertop layouts and CNC cutting files — drawn
-              in AutoCAD, programmed in Easystone, and ready for the machine.
+              production-ready countertop layouts and CNC cutting files - drawn
+              in AutoCAD, programmed in Easystone, 3D layouts in Slabsmith,and
+              ready for the machine.
             </p>
           </Reveal>
 

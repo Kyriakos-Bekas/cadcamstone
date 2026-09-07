@@ -56,7 +56,9 @@ export function Footer() {
       <div className="border-t border-line/70">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-5 text-xs text-fog-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
           <p>© {new Date().getFullYear()} CADCAM Stone. All rights reserved.</p>
-          <p className="font-mono">Drawn in AutoCAD · Cut in Easystone</p>
+          <p className="font-mono">
+            Drawn in AutoCAD · Cut in Easystone · 3D layouts in Slabsmith
+          </p>
         </div>
       </div>
     </footer>
